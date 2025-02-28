@@ -6,16 +6,16 @@ version: '1.0'
 
 require-dbt-version: ">=0.14.0"
 
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-data-paths: ["data"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 
 target-path: "target"
 clean-targets:
-    - "target"
-    - "dbt_modules"
+  - "target"
+  - "dbt_modules"
 
 quoting:
   database: false
@@ -24,9 +24,3 @@ quoting:
 
 models:
   transient: true
-
-on-run-end:
-  - "{{ grant_select_on_schemas(schemas, 'reporter') }}"
-  - "{{ grant_select_on_schemas(schemas, 'transformer') }}"
-
-
