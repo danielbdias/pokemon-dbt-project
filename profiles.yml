@@ -1,0 +1,15 @@
+
+pokemon_database:
+  outputs:
+    dev:
+      type: snowflake
+      threads: 16
+      account: fka50167
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: transformer
+      database: raw
+      warehouse: transforming
+      schema: dbt_dbdias
+      client_session_keep_alive: False
+  target: dev
