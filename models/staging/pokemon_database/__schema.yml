@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: pokemon_database
+    database: raw
+    schema: dbt_dbdias
+    tables:
+      - name: raw_abilities
+      - name: raw_egg_groups
+      - name: raw_games
+      - name: raw_items
+      - name: raw_locations
+      - name: raw_moves
+      - name: raw_pokemons
+      - name: raw_pokemon_forms
+      - name: raw_releases
+      - name: raw_types
+      - name: raw_type_charts
+      

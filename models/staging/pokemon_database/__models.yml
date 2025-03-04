@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_pokemon_database__pokemons
+    description: Pokemon data with basic cleaning and transformation applied, one row per Pokemon.
+    columns:
+      - name: ID
+        description: The unique key for each Pokemon.
+        tests:
+          - not_null
+          - unique
