@@ -1,11 +1,148 @@
 version: 2
 
 models:
-  - name: stg_pokemon_database__pokemons
-    description: Pokemon data with basic cleaning and transformation applied, one row per Pokemon.
+  # Abilities
+  - name: stg_pokemon_database__abilities
+    description: Pokemon abilities data with basic cleaning and transformation applied, one row per ability.
     columns:
       - name: ID
-        description: The unique key for each Pokemon.
+        description: The unique key for each ability.
         tests:
           - not_null
           - unique
+      - name: NAME
+        description: The name of the ability.
+        tests:
+          - not_null
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this ability was first introduced.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this ability was first introduced.
+        tests:
+          - not_null
+
+  # Egg Groups
+  - name: stg_pokemon_database__egg_groups
+    description: Pokemon egg groups data with basic cleaning and transformation applied, one row per egg group.
+    columns:
+      - name: ID
+        description: The unique key for each egg group.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the egg group.
+        tests:
+          - not_null
+
+  # Games
+  - name: stg_pokemon_database__games
+    description: Pokemon games data with basic cleaning and transformation applied, one row per game.
+    columns:
+      - name: ID
+        description: The unique key for each game.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of each game.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this game was first released.
+        tests:
+          - not_null
+
+  # Items
+  - name: stg_pokemon_database__items
+    description: Items data with basic cleaning and transformation applied, one row per item.
+    columns:
+      - name: ID
+        description: The unique key for each item.
+        tests:
+          - not_null
+          - unique  
+      - name: NAME
+        description: The name of the item.
+        tests:
+          - not_null
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this item was first introduced.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this item was first introduced.
+        tests:
+          - not_null
+      - name: COST
+        description: The cost of the item in the game.
+        tests:
+          - not_null
+  
+  # Locations
+  - name: stg_pokemon_database__locations
+    description: Locations data with basic cleaning and transformation applied, one row per location.
+    columns:
+      - name: ID
+        description: The unique key for each location.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the location.
+        tests:
+          - not_null  
+      - name: REGION
+        description: The region (Kanto, Johto, etc.) where this location is located.
+        tests:
+          - not_null
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this location was first introduced.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this location was first introduced.
+        tests:
+          - not_null
+          
+  # Moves
+  - name: stg_pokemon_database__moves
+    description: Moves data with basic cleaning and transformation applied, one row per move.
+    columns:
+      - name: ID
+        description: The unique key for each move.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the move.
+        tests:
+          - not_null  
+      - name: TYPE
+        description: The type of the move.
+        tests:
+          - not_null
+      - name: CATEGORY 
+        description: The category of the move.
+        tests:
+          - not_null
+      - name: POWER
+        description: The power of the move.
+        tests:
+          - not_null
+      - name: ACCURACY
+        description: The accuracy of the move.
+        tests:
+          - not_null
+      - name: PP
+        description: The power points of the move.
+        tests:
+          - not_null
+      - name: PRIORITY
+        description: The priority of the move in a battle.
+        tests:
+          - not_null
+
+# TODO: add more models
