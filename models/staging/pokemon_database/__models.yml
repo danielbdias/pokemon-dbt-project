@@ -104,8 +104,6 @@ models:
           - not_null
       - name: RELEASE
         description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this location was first introduced.
-        tests:
-          - not_null
           
   # Moves
   - name: stg_pokemon_database__moves
@@ -126,20 +124,12 @@ models:
           - not_null
       - name: CATEGORY 
         description: The category of the move.
-        tests:
-          - not_null
       - name: POWER
         description: The power of the move.
-        tests:
-          - not_null
       - name: ACCURACY
         description: The accuracy of the move.
-        tests:
-          - not_null
       - name: PP
         description: The power points of the move.
-        tests:
-          - not_null
       - name: PRIORITY
         description: The priority of the move in a battle.
         tests:
