@@ -176,8 +176,12 @@ models:
           - not_null
       - name: WEIGHT
         description: The weight of the form.
+        tests:
+          - not_null
       - name: GENDER
         description: The gender of the form.
+        tests:
+          - not_null
       - name: CATCH_RATE
         description: The catch rate of the form.
       - name: BASE_EXP
