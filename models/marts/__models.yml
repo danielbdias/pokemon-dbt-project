@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: unique_generation_and_releases_on_items
+    description: Unique generation and releases on items.
+    columns:
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this item was first introduced.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this item was first introduced.
+        tests:
+          - not_null
