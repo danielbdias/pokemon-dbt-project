@@ -135,4 +135,136 @@ models:
         tests:
           - not_null
 
-# TODO: add more models
+  # Pokemon Forms
+  - name: stg_pokemon_database__pokemon_forms
+    description: Represents a Pokemon specific form (e.g. Normal, Mega, etc.) data with basic cleaning and transformation applied, one row per form.
+    columns:
+      - name: ID
+        description: The unique key for each pokemon.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the pokemon form.
+        tests:
+          - not_null
+      - name: FORM_ID
+        description: The form ID of the pokemon.
+      - name: FORM_NAME
+        description: The name of the pokemon.
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this form was first introduced.
+        tests:
+          - not_null
+      - name: RELEASE
+        description: The game release (Diamond & Pearl, Sword & Shield, etc.) where this form was first introduced.
+        tests:
+          - not_null
+      - name: TYPE_1
+        description: The first type of the form.
+        tests:
+          - not_null
+      - name: TYPE_2
+        description: The second type of the form.
+      - name: STATS
+        description: The stats of the form.
+      - name: SPECIES
+        description: The species of the form.
+      - name: HEIGHT
+        description: The height of the form.
+        tests:
+          - not_null
+      - name: WEIGHT
+        description: The weight of the form.
+      - name: GENDER
+        description: The gender of the form.
+      - name: CATCH_RATE
+        description: The catch rate of the form.
+      - name: BASE_EXP
+        description: The base experience of the form.
+      - name: EGG_CYCLES
+        description: The egg cycles of the form.
+      - name: FRIENDSHIP
+        description: The friendship of the form.
+      - name: GROWTH_RATE
+        description: The growth rate of the form.
+        tests:
+          - not_null
+      - name: EV_YIELD
+        description: The EV yield of the form.
+        tests:
+          - not_null 
+        
+  # Pokemons
+  - name: stg_pokemon_database__pokemons
+    description: Represents a Pokemon data with basic cleaning and transformation applied, one row per pokemon.
+    columns:
+      - name: ID
+        description: The unique key for each pokemon.
+        tests:
+          - not_null
+          - unique
+      - name: NATIONAL_ID
+        description: The national ID of the pokemon.
+      - name: NAME
+        description: The name of the pokemon.
+        tests:
+          - not_null
+          - unique
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this pokemon was first introduced.
+        tests:
+          - not_null
+        
+  # Releases
+  - name: stg_pokemon_database__releases
+    description: Represents a game release data with basic cleaning and transformation applied, one row per release.
+    columns:
+      - name: ID
+        description: The unique key for each release.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the release.
+        tests:
+          - not_null  
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) presented on this release.
+        tests:
+          - not_null
+        
+  # Type Charts
+  - name: stg_pokemon_database__type_charts
+    description: Represents a type chart data with basic cleaning and transformation applied, one row per type chart.
+    columns:
+      - name: ID
+        description: The unique key for representing a pokemon type.
+        tests:
+          - not_null
+          - unique
+      - name: SUPER_EFFECTIVE
+        description: The types that are super effective against the type.
+      - name: NOT_VERY_EFFECTIVE
+        description: The types that are not very effective against the type.
+      - name: NO_EFFECT
+        description: The types that have no effect on the type.
+
+  # Types
+  - name: stg_pokemon_database__types
+    description: Represents a pokemon type data with basic cleaning and transformation applied, one row per pokemon type.
+    columns:
+      - name: ID
+        description: The unique key for representing a pokemon type.
+        tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: The name of the pokemon type.
+        tests:
+          - not_null
+      - name: GENERATION
+        description: The generation (1st, 2nd, etc.) where this type was first introduced.
+        tests:
+          - not_null
+        
