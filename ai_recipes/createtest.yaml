@@ -6,7 +6,7 @@ prompt: |
   - If there is an ID column, it should be not null and unique
   - Other columns should be not null
  The proposed test should be added to the model, located on the file "{{ schema_file }}".
- After updating the schema file, the tests should be run.
+ After updating the schema file, the tests should be run and the results should be displayed.
 parameters:
   - key: model
     description: The model to create a test for
