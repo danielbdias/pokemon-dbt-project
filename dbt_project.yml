@@ -12,7 +12,6 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 
-target-path: "target"
 clean-targets:
   - "target"
   - "dbt_modules"
@@ -23,4 +22,7 @@ quoting:
   schema: false
 
 models:
-  transient: true
+  +transient: true
+  
+flags:
+  require_generic_test_arguments_property: true
