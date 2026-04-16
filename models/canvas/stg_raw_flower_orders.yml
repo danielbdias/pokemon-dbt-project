@@ -1,0 +1,35 @@
+version: 2
+sources:
+- name: uploads
+  database: ANALYTICS
+  schema: DBT_DBDIAS
+  tables:
+  - name: raw_flower_orders_csv
+    columns:
+    - name: flower_order_id
+      data_type: TEXT
+    - name: customer_name
+      data_type: TEXT
+    - name: customer_email
+      data_type: TEXT
+    - name: customer_phone
+      data_type: TEXT
+    - name: arrangement_id
+      data_type: TEXT
+    - name: quantity
+      data_type: NUMBER
+    - name: total_amount
+      data_type: NUMBER
+    - name: delivery_id
+      data_type: TEXT
+    - name: occasion
+      data_type: TEXT
+    - name: promo_code
+      data_type: TEXT
+    - name: discount_amount
+      data_type: NUMBER
+    - name: order_date
+      data_type: TIMESTAMP_NTZ
+    - name: order_status
+      data_type: TEXT
+    identifier: VE_UPLOADS__9F774890C1776B11D313E6EB0BA36381
