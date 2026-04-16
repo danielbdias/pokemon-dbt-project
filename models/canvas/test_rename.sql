@@ -10,7 +10,7 @@ WITH stg_pokemon_database__games AS (
   FROM stg_pokemon_database__games
 ), projection AS (
   SELECT
-    NEW_ID AS ID,
+    NEW_ID AS ID2,
     *
     EXCLUDE (ID, NEW_ID)
   FROM formula
